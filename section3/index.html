@@ -16,6 +16,11 @@
             <input type="text" v-model="newItem">
             <button v-on:click="addItem">Add</button>
         </form>
+        <ul>
+            <li v-for="todo in todos">
+                <span>{{ todo.item }}</span>
+            </li>
+        </ul>
         <pre>{{ $data }}</pre>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
