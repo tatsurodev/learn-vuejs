@@ -10,10 +10,10 @@
 
 <body>
     <div id="app">
-        <p>{{ message }}</p>
-        <p>{{ count }}</p>
-        <p>{{ user.prefecture }}</p>
-        <p>{{ colors[1] }}</p>
+        <!-- mastache構文はテキストにのみ使用可 -->
+        <!-- 属性へのdata bindingは、v-bind directiveを使用 -->
+        <!-- <input type="text" value="{{ message }}"> -->
+        <input type="text" v-bind:value="message">
     </div>
     <!-- 開発環境用 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
