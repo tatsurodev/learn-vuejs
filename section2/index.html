@@ -10,20 +10,8 @@
 
 <body>
     <div id="app">
-        <ul>
-            <li v-for="value in user">{{ value }}</li>
-        </ul>
-        <ul>
-            <!-- カッコ内は第一引数がvalue, 第二引数がkeyであることに注意 -->
-            <li v-for="(value, key) in user">
-                {{ key }} : {{ value }}
-            </li>
-        </ul>
-        <ul>
-            <li v-for="(v, k) in user">
-                {{ k }} : {{ v }}
-            </li>
-        </ul>
+        <button v-on:click="onclick">Click!</button>
+        <p>{{ now }}</p>
     </div>
     <!-- 開発環境用 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
