@@ -7,6 +7,8 @@ var app = new Vue({
     methods: {
         addItem: function (event) {
             // alert()
+            // newItemが空欄なら処理中止
+            if (this.newItem === '') return
             var todo = {
                 item: this.newItem,
             }
