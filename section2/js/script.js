@@ -4,5 +4,11 @@ var app = new Vue({
         message: 'Hello World!',
         url: 'https://jp.vuejs.org/',
         toggle: true,
+        languages: ['Javascript', 'Ruby', 'Python',]
+    },
+    methods: {
+        clickHandler: function () {
+            this.message = 'Clicked!'
+        }
     }
 })
