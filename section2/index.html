@@ -11,7 +11,7 @@
 <body>
     <div id="app">
         <!-- v-ifはdomから削除するため描画コストが高い、cssでdisplay: noneにするにはv-showを使用するとよい -->
-        <p v-if="toggle">Hello</p>
+        <p v-show="toggle">Hello</p>
     </div>
     <!-- 開発環境用 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
