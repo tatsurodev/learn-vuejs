@@ -5,19 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>演習33</title>
 </head>
 
 <body>
     <div id="app">
-        <hello-component></hello-component>
-        <hello-component></hello-component>
-        <hello-component></hello-component>
+        <p>{{ message }}</p>
+        <p v-if="toggle">
+            <a v-bind:href="url">Vue.js</a>
+        </p>
     </div>
-    <!-- 開発環境用 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-    <!-- 本番環境用 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script> -->
     <script src="js/script.js"></script>
 </body>
 
