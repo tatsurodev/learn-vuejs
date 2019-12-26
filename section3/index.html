@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Section 3</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
         <ul>
             <li v-for="todo in todos">
                 <input type="checkbox" v-model="todo.isDone">
-                <span>{{ todo.item }}</span>
+                <span v-bind:class="{ done: todo.isDone }">{{ todo.item }}</span>
             </li>
         </ul>
         <pre>{{ $data }}</pre>
