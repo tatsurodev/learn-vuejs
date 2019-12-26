@@ -23,7 +23,9 @@ var app = new Vue({
     methods: {
         getAnswer: function () {
             if (this.keyword === '') {
+                // formが空で前の検索結果のitemsを空に、messageも初期化
                 this.items = null
+                this.message = ''
                 return
             }
             this.message = 'Loading...'
