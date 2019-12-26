@@ -1,10 +1,13 @@
 var app = new Vue({
     el: '#app',
     data: {
-        // htmlにhard codeすると可読性が下がる時にobject dataをclassにdata bindingする
-        classObject: {
+        largeClass: {
             large: true,
+            'bg-gray': true,
+        },
+        dangerClass: {
             'text-danger': true,
-        }
+        },
+        isLarge: true,
     }
 })
