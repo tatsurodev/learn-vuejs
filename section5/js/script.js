@@ -1,4 +1,7 @@
-// 他のcomponent等でも使用するfilterの登録にglobal filterは便利
+Vue.filter('toUSD', function (jpy) {
+    return jpy / 100
+})
+
 Vue.filter('numberFormat', function (value) {
     return value.toLocaleString()
 })
@@ -6,11 +9,6 @@ Vue.filter('numberFormat', function (value) {
 var app = new Vue({
     el: '#app',
     data: {
-        price: 29800,
+        jpyPrice: 298000000,
     },
-    // filters: {
-    //     numberFormat: function (value) {
-    //         return value.toLocaleString()
-    //     }
-    // },
 })
