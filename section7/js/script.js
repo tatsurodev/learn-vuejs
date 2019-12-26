@@ -22,6 +22,7 @@ var app = new Vue({
                 )
             },
             deep: true,
+            immediate: true,
         },
     },
 })
