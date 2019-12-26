@@ -3,9 +3,5 @@ var app = new Vue({
     data: {
         message: 'Hello Vue.js!',
     },
-    methods: {
-        clickHandler: function () {
-            this.message = this.message.split('').reverse().join('')
-        },
-    },
+
 })
