@@ -11,8 +11,9 @@
 
 <body>
     <div id="app">
-        <h2>v-cloak</h2>
-        <p v-cloak>{{ message }}</p>
+        {{ message }}
+        <p v-text="message"></p>
+        <p>mastache構文は他のテキストと {{ message }} 混ぜることができるが、v-html directiveはできない</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/script.js"></script>
