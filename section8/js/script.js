@@ -6,11 +6,19 @@ var app = new Vue({
         message: '',
     },
     watch: {
-
+        keyword: function (newKeyword, oldKeyword) {
+            // console.log(newKeyword)
+            this.message = 'Waiting for you to stop typing...'
+            // keywordに変化がある度loadashで間引いた関数を実行
+            this.debouncedGetAnswer()
+        },
     },
     created: function () {
-        this.keyword = 'Javascript'
-        this.getAnswer()
+        // this.keyword = 'Javascript'
+        // this.getAnswer()
+        // _.debounce(間引く関数, 時間)
+        // loadashで新たに間引いた関数を返す、グローバル変数debouncedGetAnswerにその関数を格納
+        this.debouncedGetAnswer = _.debounce(this.getAnswer, 1000)
     },
     methods: {
         getAnswer: function () {
