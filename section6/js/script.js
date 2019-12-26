@@ -1,20 +1,16 @@
 var app = new Vue({
     el: '#app',
     data: {
-        message: 'Hello Vue.js!',
+        basePrice: 100,
     },
-    // 依存関係が変化しない限りcached
-    // getter, setter両方可
     computed: {
-        reversedMessage: function () {
-            return this.message.split('').reverse().join('')
-        },
-    },
-    // not cached
-    // getterのみ
-    methods: {
-        reversedMessageMethod: function () {
-            return this.message.split('').reverse().join('')
+        taxIncludedPrice: {
+            get: function () {
+                return parseInt(this.basePrice * 1.08)
+            },
+            set: function (taxIncludedPrice) {
+                this.basePrice = Math.ceil(taxIncludedPrice / 1.08)
+            },
         },
     },
 })
