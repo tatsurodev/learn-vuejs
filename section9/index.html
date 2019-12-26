@@ -11,7 +11,8 @@
 
 <body>
     <div id="app">
-        <p>Hello <span v-bind:class="{ large: isLarge }">Vue.js!</span></p>
+        <!-- class名にhyphenを含む時、single quoteで囲む -->
+        <p>Hello <span v-bind:class="{ large: isLarge, 'text-danger': hasError }">Vue.js!</span></p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/script.js"></script>
