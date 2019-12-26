@@ -1,33 +1,18 @@
-/*
-// watched property
 var app = new Vue({
     el: '#app',
     data: {
-        firstName: '',
-        lastName: '',
-        fullName: '',
+        colors: [
+            { name: 'Red', },
+            { name: 'Green', },
+            { name: 'Blue', },
+        ],
     },
     watch: {
-        firstName: function (value) {
-            this.fullName = value + ' ' + this.lastName
-        },
-        lastName: function (value) {
-            this.fullName = this.firstName + ' ' + value
-        }
-    },
-})
-*/
-
-// computed property
-var app = new Vue({
-    el: '#app',
-    data: {
-        firstName: '',
-        lastName: '',
-    },
-    computed: {
-        fullName: function () {
-            return this.firstName + ' ' + this.lastName
+        colors: {
+            handler: function (newValue, oldValue) {
+                console.log('Update!')
+            },
+            deep: true,
         },
     },
 })
