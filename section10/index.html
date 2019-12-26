@@ -11,10 +11,9 @@
 
 <body>
     <div id="app">
-        <p v-if="color === 'red'">Stop</p>
-        <p v-else-if="color === 'yellow'">Caution</p>
-        <p v-else-if="color === 'blue'">Go</p>
-        <p v-else>Not red/yellow/blue</p>
+        <p v-show="toggle">Hello Vue.js!</p>
+        <!-- v-showは, v-elseとは連動しないので下記はerror -->
+        <p v-else>Good Bye!</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/script.js"></script>
