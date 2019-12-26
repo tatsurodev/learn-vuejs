@@ -11,8 +11,8 @@
 
 <body>
     <div id="app">
-        <!-- defaultでdangerClassのobjectをbindingしたいので、配列形式で指定して、最初に三項演算子、後でobjectをbindingしている -->
-        <p>Hello <span v-bind:class="[isLarge ? largeClass : '', dangerClass]">Vue.js!</span></p>
+        <p>Hello <span v-bind:style="{ color: color, fontSize: fontSize + 'px' }">Vue.js!</span></p>
+        <p>Hello <span v-bind:style="{ color: color, 'font-size': fontSize + 'px' }">Vue.js!</span></p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/script.js"></script>
