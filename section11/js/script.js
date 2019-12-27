@@ -5,8 +5,10 @@ var app = new Vue({
         message: '',
     },
     methods: {
-        clickHandler: function (message) {
+        // $eventはvueで指定されているものなので$eとかではダメ
+        clickHandler: function ($event, message) {
             this.message = message
+            console.log($event)
         },
     },
 })
