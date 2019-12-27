@@ -11,13 +11,13 @@
 
 <body>
     <div id="app">
-        <input type="radio" id="red" value="Red" v-model="color">
-        <label for="red">Red</label>
-        <input type="radio" id="green" value="Green" v-model="color">
-        <label for="green">Green</label>
-        <input type="radio" id="Blue" value="blue" v-model="color">
-        <label for="blue">Blue</label>
-        <p>{{ color }}</p>
+        <select v-model="selected">
+            <option disable value="">Please select one</option>
+            <option>Red</option>
+            <option>Green</option>
+            <option>Blue</option>
+        </select>
+        <p>{{ selected }}</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/script.js"></script>
