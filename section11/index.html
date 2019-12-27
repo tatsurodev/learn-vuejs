@@ -11,7 +11,9 @@
 
 <body>
     <div id="app">
-        <button v-on:click.once="clickHandler">Now</button>
+        <!-- <input type="text" v-on:keyup.27="clear" v-model="message"> -->
+        <!-- <input type="text" v-on:keyup.esc="clear" v-model="message"> -->
+        <input type="text" v-on:keyup.esc.space.up="clear" v-model="message">
         <p>{{ message }}</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
