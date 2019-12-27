@@ -4,11 +4,8 @@ var app = new Vue({
         message: '',
     },
     methods: {
-        clear: function () {
-            this.message = ''
-        },
         clickHandler: function () {
-            alert('shift + click')
+            alert('Clicked!')
         },
     },
 })
