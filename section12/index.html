@@ -11,8 +11,9 @@
 
 <body>
     <div id="app">
-        <p>{{ message }}</p>
-        <input type="text" v-model="message" value="hogehoge">
+        <pre>{{ message }}</pre>
+        <!-- <!-- <textarea>{{ message }}</textarea> --> -->
+        <textarea v-model="message"></textarea>
         <pre>{{ $data }}</pre>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
