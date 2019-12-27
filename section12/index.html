@@ -11,13 +11,9 @@
 
 <body>
     <div id="app">
-        <select v-model="selected" multiple>
-            <option disable value="">Please select one</option>
-            <option>Red</option>
-            <option>Green</option>
-            <option>Blue</option>
-        </select>
-        <p>{{ selected }}</p>
+        <!-- lazy modifierでenter, tab, focusが外れた時に同期させる -->
+        <input type="text" v-model.lazy="message">
+        <p>{{ message }}</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/script.js"></script>
