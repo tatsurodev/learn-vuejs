@@ -7,5 +7,8 @@ var app = new Vue({
         clear: function () {
             this.message = ''
         },
+        clickHandler: function () {
+            alert('shift + click')
+        },
     },
 })

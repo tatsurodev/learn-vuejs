@@ -13,7 +13,10 @@
     <div id="app">
         <!-- <input type="text" v-on:keyup.27="clear" v-model="message"> -->
         <!-- <input type="text" v-on:keyup.esc="clear" v-model="message"> -->
-        <input type="text" v-on:keyup.esc.space.up="clear" v-model="message">
+        <!-- <input type="text" v-on:keyup.esc.space.up="clear" v-model="message"> -->
+        <!-- ctrl+cでclear -->
+        <input type="text" v-on:keyup.ctrl.67="clear" v-model="message">
+        <div v-on:click.shift="clickHandler">Click me!</div>
         <p>{{ message }}</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
